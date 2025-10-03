@@ -7,7 +7,22 @@
         },
         {
             "label": "2025-10-02_19-12-57",
-            "content": "class Animal:\n    def __init__(self, species: str, sound: str):\n        self.species: str = species \n        self.sound: str = sound\n        self.age: int = 0\n\n    def ageBy(self, increment: int) -> None:\n        self.age += increment\n        if self.age >= 4:\n            self.age = 4\n            print (\"warning: {species} morreu\")\n\n    def makeSound(self) -> str:\n        if self.age == 0:\n            return \"---\"\n        if self.age >=4:\n            return \"RIP\"\n        else:\n            return self.sound\n        \n    def __str__(self) -> str:\n        return \"{species}:{age}:{sound}\" \n    \ndef main():\n    animal: Animal = Animal \n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str]  = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            \n            species: str = args[1]\n            sound: str = args[2]\n            animal = Animal(species,sound)\n        elif args[0] == \"grow\":\n            increment: int = int(args[1])\n            animal.ageBy(increment)\n        elif args[0] == \"show\":\n            print(animal)\n        elif args[0] == \"som\":\n            print(animal.makeSound())\n        else:\n            print (\"fail: comando n\u00e3o encontrado\") ",
+            "content": "@@ -563,11 +563,9 @@\n urn \n-f%22:\n+%22\n %7Bspe\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-03_12-50-46",
+            "content": "@@ -563,21 +563,16 @@\n urn f%22:%7B\n-self.\n species%7D\n@@ -577,24 +577,14 @@\n s%7D:%7B\n-self.\n age%7D:%7B\n-self.\n soun\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-03_12-53-07",
+            "content": "@@ -309,21 +309,16 @@\n rning: %7B\n-self.\n species%7D\n@@ -651,15 +651,8 @@\n imal\n-(%22%22,%22%22)\n  %0A  \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-03_12-56-49",
+            "content": "class Animal:\n    def __init__(self, species: str, sound: str):\n        self.species: str = species \n        self.sound: str = sound\n        self.age: int = 0\n\n    def ageBy(self, increment: int) -> None:\n        self.age += increment\n        if self.age >= 4:\n            self.age = 4\n            print (\"warning: {self.species} morreu\")\n\n    def makeSound(self) -> str:\n        if self.age == 0:\n            return \"---\"\n        if self.age >=4:\n            return \"RIP\"\n        else:\n            return self.sound\n        \n    def __str__(self) -> str:\n        return f\":{self.species}:{self.age}:{self.sound}\" \n    \ndef main():\n    animal: Animal = Animal(\"\",\"\") \n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str]  = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            \n            species: str = args[1]\n            sound: str = args[2]\n            animal = Animal(species,sound)\n        elif args[0] == \"grow\":\n            increment: int = int(args[1])\n            animal.ageBy(increment)\n        elif args[0] == \"show\":\n            print(animal)\n        elif args[0] == \"som\":\n            print(animal.makeSound())\n        else:\n            print (\"fail: comando n\u00e3o encontrado\") ",
             "lines": "47"
         }
     ]

@@ -8,7 +8,7 @@ class Animal:
         self.age += increment
         if self.age >= 4:
             self.age = 4
-            print ("warning: {species} morreu")
+            print ("warning: {self.species} morreu")
 
     def makeSound(self) -> str:
         if self.age == 0:
@@ -19,10 +19,10 @@ class Animal:
             return self.sound
         
     def __str__(self) -> str:
-        return "{species}:{age}:{sound}" 
+        return f":{self.species}:{self.age}:{self.sound}" 
     
 def main():
-    animal: Animal = Animal 
+    animal: Animal = Animal("","") 
     while True:
 
         line: str = input()
